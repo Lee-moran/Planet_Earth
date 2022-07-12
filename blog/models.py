@@ -11,13 +11,14 @@ STATUS = ((0, 'Draft'),(1,'Published'))
 How our post will be viewed by user
 """
 
+
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="blog_posts"
     )
-    location = models.CharField(max_length=100, unique=True)
+    location = models.CharField(max_length=100, unique=False)
     featured_image = CloudinaryField('image', default='placeholder')
     excerpt = models.TextField(blank=True)
     updated_on = models.DateTimeField(auto_now=True)
@@ -40,6 +41,7 @@ class Post(models.Model):
 """
 How our comment will be viewed by user
 """
+
 
 class Comment(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE,

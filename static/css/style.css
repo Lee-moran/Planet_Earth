@@ -9,8 +9,8 @@ body {
     color: #060640;
 }
 
-.green-o {
-    color: #10e810;
+.black-o {
+    color: #000;
 }
 
 .blue-o {
@@ -163,7 +163,8 @@ body {
     top: 45%;
     left: 0;
     width: 100%;
-    background-color: transparent;
+    background-color: rgba(174, 170, 170, 0.546)
+    
   }
   
   .text-center-caption {
