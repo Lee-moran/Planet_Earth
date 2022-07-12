@@ -9,12 +9,16 @@ body {
     color: #4A4A4F;
 }
 
-.red-o {
-    color: #E84610;
+.green-o {
+    color: #10e810;
+}
+
+.blue-o {
+    color: #3d15ee;
 }
 
 .thin {
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .light-bg {
@@ -140,4 +144,10 @@ body {
     background: transparent;
     border: none;
 }
-Footer
+.input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;

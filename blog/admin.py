@@ -8,17 +8,17 @@ class PostAdmin(SummernoteModelAdmin):
     Use Summernote for Blog admin
     """
     list_display = ('title', 'slug', 'status', 'created_on')
-    search_fields = ['title', 'content']
+    search_fields = ['name', 'title', 'content']
     list_filter = ('status', 'created_on')
     prepopulated_fields = {'slug': ('title',)}
     summernote_fields = ('content')
-    actions = ['approve_posts']
+    # actions = ['approve_posts']
 
-    def approve_posts(self, request, queryset):
-        """
-        approval of comments
-        """
-        queryset.update(approved=True)
+    # def approve_posts(self, request, queryset):
+    #     """
+    #     approval of comments
+    #     """
+    #     queryset.update(approved=True)
 
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
