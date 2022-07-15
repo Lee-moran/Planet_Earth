@@ -5,6 +5,7 @@ from cloudinary.models import CloudinaryField
 # Create your models here.
 
 # create a tuple for our status 
+
 STATUS = ((0, 'Draft'),(1,'Published'))
 
 """
