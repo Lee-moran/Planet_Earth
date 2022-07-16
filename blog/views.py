@@ -87,11 +87,11 @@ class PostLike(View):
 
 class YourBlogs(View):
     def get(self, request):
-        “”"
+        '''
         your_blogs view, get method
-        “”"
+        '''
         post = Post.objects.filter(author=request.user)
         paginator = Paginator(post, 6)
-        page_number = request.GET.get(‘page’)
+        page_number = request.GET.get('page')
         page_obj = paginator.get_page(page_number)
-        return render(request, ‘your_blogs.html’, {“page_obj”: page_obj,})
+        return render(request, 'your_blogs.html', {'page_obj': page_obj,})
