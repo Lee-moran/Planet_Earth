@@ -180,3 +180,20 @@ body {
   }
   
 
+.footer {
+    font-size: 30px;
+}
+.footer a {
+    color: rgb(18, 186, 43);
+}
+.social-links {
+    margin: 0;
+    text-align: center;
+    font-size: 40px;
+}
+
+
+
+
+
+
