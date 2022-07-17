@@ -1,19 +1,22 @@
 {% extends "base.html" %}
+
 {% block content %}
+
 {% load static %}
-{% load crispy_forms_tags %}
 
 <div class="container">
     <div class="row">
         <div class="col-12 text-center mt-5">
-            <h2>Your Blogs</h2>
+            <h2>Your Blogs </h2>
             <hr>
         </div>
         <div class="col-12 text-center mt-2">
-            
+            <a href="{% url 'add_blogs' %}"><button class="btn-lg btn-blue mb-2" >Add Blog<i class="fas fa-plus-square ml-3"></i></button></a>
         </div>
     </div>
 </div>
+
+
 <div class="container-fluid">
     <div class="row">
         <div class="col-12 mt-4">
@@ -21,7 +24,7 @@
                 {% for post in page_obj %}
                 <div class="col-md-4">
                     <div class="card border-0 mb-4 all-recipes-cards">
-                        <a href="{% url 'blog_details' post.slug %}" class="text-decoration-none text-reset">
+                        <a href="" class="text-decoration-none text-reset">
                             <div class="card-body">
                                 <div class="image-container">
                                 {% if "placeholder" in post.image.url %}
@@ -40,7 +43,7 @@
                         <div class="text-center">
                             <!-- EDIT & DELETE BUTTONS -->
                             <span>
-                            <a href="{% url 'edit_blogs' post.id %}"><button class="btn-sm btn-success ">Edit</button></a></span>
+                            <a href=""><button class="btn-sm btn-success ">Edit</button></a></span>
                             <span>
                             <button type="button" class="btn-sm btn-danger" data-toggle="modal" data-target="#deleteModal{{post.id}}">Delete</button>
                             </span>
@@ -53,16 +56,16 @@
                          <button type="button" class="close" data-dismiss="modal">&times;</button>
                       </div>
                       <div class="modal-body">
-                         <h4>Are you sure you want to delete the Blog {{ post.title }}?</h4>
+                         <h4>Are you sure you want to delete the recipe {{ post.title }}?</h4>
                          <p>This action cannot be undone.</p>
                       </div>
                       <div class="modal-footer">
                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                         <a href="{% url 'delete_blog' post.id %}" class="btn btn-danger">Delete</a>
+                         <a href="" class="btn btn-danger">Delete</a>
                       </div>
                    </div>
                 </div>
-             </div>
+             </div>   
                     </div>
                 </div>
             {% if forloop.counter|divisibleby:3 %}
@@ -74,5 +77,9 @@
         </div>
     </div>
 </div>
+
+
 {% include "pagination.html" %}
+
+
 {%endblock%}

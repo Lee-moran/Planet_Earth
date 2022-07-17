@@ -1,9 +1,11 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.http import HttpResponseRedirect
+from django.views.generic import UpdateView
 from .models import Post
-from .forms import CommentForm
+from .forms import CommentForm, BlogForm
 from django.core.paginator import Paginator
+from django.utils.text import slugify
 
 # Create your views here.
 
@@ -95,3 +97,36 @@ class YourBlogs(View):
         page_number = request.GET.get('page')
         page_obj = paginator.get_page(page_number)
         return render(request, 'your_blogs.html', {'page_obj': page_obj,})
+
+
+class AddBlog(View):
+
+    def get(self, request):
+        """
+        What happens for a GET request
+        """
+        return render(request, "add_blogs.html", {"blog_form": BlogForm()})
+
+    def post(self, request):
+        """
+        What happens for a POST request
+        """
+        blog_form = BlogForm(request.POST, request.FILES)
+
+        if blog_form.is_valid():
+            blog = blog_form.save(commit=False)
+            blog.author = request.user
+            blog.slug = slugify('-'.join([blog.title, str(blog.author)]), allow_unicode=False)
+            blog.save()
+            return redirect('your_blogs')
+        else:
+            # create message error 
+            blog_form = BlogForm()
+
+        return render(
+            request,
+            "add_blogs.html",
+            {
+                 "blog_form": blog_form
+            },
+        )
