@@ -22,9 +22,6 @@ class BlogForm(forms.ModelForm):
             'featured_image',
         ]
 
-        widgets = {
-            'exerpt': SummernoteInplaceWidget()
-        }
-
     def __init__(self, *args, **kwargs):
         super(BlogForm, self).__init__(*args, **kwargs)
+

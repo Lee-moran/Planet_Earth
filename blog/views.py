@@ -14,6 +14,7 @@ from django.utils.text import slugify
 # allows us yo view our blog 
 # MVT - model,view,teplates
 
+
 class PostList(generic.ListView):
     model = Post
     queryset = Post.objects.filter(status=1).order_by("-created_on")
@@ -42,7 +43,7 @@ class PostDetail(View):
                 "comment_form": CommentForm()
             },
         )
-    
+        
     def post(self, request, slug, *args, **kwargs):
 
         queryset = Post.objects.filter(status=1)
@@ -113,7 +114,7 @@ class AddBlog(View):
         """
         blog_form = BlogForm(request.POST, request.FILES)
 
-        if blog_form.is_valid():
+        if  blog_form.is_valid():
             blog = blog_form.save(commit=False)
             blog.author = request.user
             blog.slug = slugify('-'.join([blog.title, str(blog.author)]), allow_unicode=False)
@@ -130,3 +131,83 @@ class AddBlog(View):
                  "blog_form": blog_form
             },
         )
+
+
+class BlogDetails(View):
+    """
+    Blog details page 
+    """
+    def get(self, request, slug):
+        queryset = Post.objects.all()
+        post = get_object_or_404(queryset, slug=slug)
+        comments = post.comments.filter(approved=True).order_by("-created_on")
+        liked = False
+        if post.likes.filter(id=self.request.user.id).exists():
+            liked = True
+
+        return render(
+            request,
+            "blog_details.html",
+            {
+                "post": post,
+                "comments": comments,
+                "liked": liked,
+                "comment_form": CommentForm(),
+            }
+        )
+
+    def post(self, request, slug):
+        """
+        What happens when a POST like request
+        """
+        queryset = Post.objects.all()
+        post = get_object_or_404(queryset, slug=slug)
+        comments = post.post_comments.order_by('created_on')
+        liked = False
+        if post.likes.filter(id=self.request.user.id).exists():
+            liked = True
+
+        comment_form = CommentForm(data=request.POST)
+
+        if comment_form.is_valid():
+            comment_form.instance.email = request.user.email
+            comment_form.instance.name = request.user.username
+            comment = comment_form.save(commit=False)
+            comment.post = post
+            comment.save()
+            return HttpResponseRedirect(reverse('blog_details', args=[slug]))
+        else:
+            comment_form = CommentForm()
+
+        return render(
+            request,
+            "blog_details.html",
+            {
+                "post": post,
+                "comments": comments,
+                "liked": liked,
+                "comment_form": CommentForm()
+            }
+        )
+
+
+class BlogLikes(View):
+
+    def post(self, request, slug):
+        post = get_object_or_404(Post, slug=slug)
+
+        if post.likes.filter(id=request.user.id).exists():
+            post.likes.remove(request.user)
+        else:
+            post.likes.add(request.user)
+        return HttpResponseRedirect(reverse('blog_details', args=[slug]))
+
+
+class AllBlogs(generic.ListView):
+    """
+    all_recipes view
+    """
+    model = Post
+    queryset = Post.objects.order_by('-created_on')
+    template_name = 'all_blogs.html'
+    paginate_by = 6
