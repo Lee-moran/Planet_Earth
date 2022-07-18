@@ -38,6 +38,7 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+                    <a class="nav-link active" aria-current="page" href="{% url 'all_post' %}">Blogs</a>
                   </li>
                   {% if user.is_authenticated %}
                   <li class="nav-item dropdown">
@@ -45,12 +46,13 @@
                         Hi {{ user.username }}
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="{% url 'your_blogs' %}">Blogs</a></li>
-                      <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
+                      <li><a class="dropdown-item" href="{% url 'your_blogs' %}">Your Blogs</a></li>
+                      <li><a class="dropdown-item" role='button'href="{% url 'add_blogs' %}">add blog</a></li>
                       <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
                     </ul>
                   </li>
+            
                   {% else %}
                   <li class="nav-item">
                     <a class="nav-link" href="{% url 'account_signup' %}">Register</a>

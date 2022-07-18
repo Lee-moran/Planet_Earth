@@ -1,10 +1,11 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.http import HttpResponseRedirect
+from django.utils.text import slugify
+from django.core.paginator import Paginator
 from .models import Post
 from .forms import CommentForm, BlogForm
-from django.core.paginator import Paginator
-from django.utils.text import slugify
+
 
 # Create your views here.
 
@@ -98,9 +99,9 @@ class YourBlogs(View):
         page_number = request.GET.get('page')
         page_obj = paginator.get_page(page_number)
         return render(request, 'your_blogs.html', {"page_obj": page_obj,})
+        
 
-
-class AddBlog(View):
+class AddBlogs(View):
 
     def get(self, request):
         """
@@ -131,3 +132,14 @@ class AddBlog(View):
                  "blog_form": blog_form
             },
         )
+
+
+class AllPosts(generic.ListView):
+    """
+    to get all the posts, and display 6 posts
+    per page
+    """
+    model = Post
+    queryset = Post.objects.filter(status=1).order_by('-created_on')  # noqa: E501
+    template_name = 'all_post.html'
+    paginate_by = 6
