@@ -143,3 +143,4 @@ class AllPosts(generic.ListView):
     queryset = Post.objects.filter(status=1).order_by('-created_on')  # noqa: E501
     template_name = 'all_post.html'
     paginate_by = 6
+
