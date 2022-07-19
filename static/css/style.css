@@ -191,6 +191,20 @@ body {
     font-size: 40px;
 }
 
+/*
+ADD PAGE
+*/
+.control-group {
+    margin-left: auto;
+    margin-right: auto;
+    width: 20em;
+}
+.btn-secondary {
+    margin-top: 20px;
+    margin-left: 450px;
+
+    
+}
 
 
 

@@ -10,7 +10,7 @@ from .forms import CommentForm, BlogForm
 
 # Create your views here.
 
-# class based views - allow us to make 
+# class based views - allow us to make
 # resuable views which inherit from each other
 # allows us yo view our blog 
 # MVT - model,view,teplates
@@ -129,9 +129,11 @@ class AddBlogs(View):
             blog.author = request.user
             blog.slug = slugify('-'.join([blog.title, str(blog.author)]), allow_unicode=False)
             blog.save()
+            messages.success(request, 'Your post is awaiting approval.')
             return redirect('your_blogs')
             
         else:
+            messages.error(request, 'Error: Something went wrong, please try again.')  # noqa: E501
             # create message error 
             blog_form = BlogForm()
 
@@ -142,7 +144,6 @@ class AddBlogs(View):
                  "blog_form": blog_form
             },
         )
-
 
 class AllPosts(generic.ListView):
     """
