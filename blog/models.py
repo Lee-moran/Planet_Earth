@@ -38,6 +38,10 @@ class Post(models.Model):
     def number_of_likes(self):
         return self.likes.count()
 
+    def get_absolute_url(self):
+        """Sets absolute URL"""
+        return reverse('your_blogs')
+
 """
 How our comment will be viewed by user
 """

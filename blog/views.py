@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
+from django.views.generic import UpdateView
 from django.http import HttpResponseRedirect
 from django.utils.text import slugify
 from django.contrib import messages
@@ -147,11 +148,28 @@ class AddBlogs(View):
 
 class AllPosts(generic.ListView):
     """
-    to get all the posts, and display 6 posts
+    all the posts, and display 6 posts
     per page
     """
     model = Post
     queryset = Post.objects.filter(status=1).order_by('-created_on')  # noqa: E501
     template_name = 'all_post.html'
-    paginate_by = 6
+    paginate_by = 9
 
+
+def delete_blogs(request, post_id):
+    """
+    Deletes recipe
+    """
+    post = get_object_or_404(Post, id=post_id)
+    post.delete()
+    return redirect(reverse(
+        'your_blogs'))
+
+class EditBlog(UpdateView):
+    """ 
+    Edit Recipe 
+    """
+    model = Post
+    template_name = 'editblog.html'
+    form_class = BlogForm
