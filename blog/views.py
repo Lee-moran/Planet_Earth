@@ -146,9 +146,10 @@ class AddBlogs(View):
             },
         )
 
+
 class AllPosts(generic.ListView):
     """
-    all the posts, and display 6 posts
+    all the posts, and display 9 posts
     per page
     """
     model = Post
@@ -157,19 +158,20 @@ class AllPosts(generic.ListView):
     paginate_by = 9
 
 
+class EditBlog(UpdateView):
+    """ 
+    User Edits there blog  
+    """
+    model = Post
+    template_name = 'editblog.html'
+    form_class = BlogForm
+
+
 def delete_blogs(request, post_id):
     """
-    Deletes recipe
+    Deletes there own blogs
     """
     post = get_object_or_404(Post, id=post_id)
     post.delete()
     return redirect(reverse(
         'your_blogs'))
-
-class EditBlog(UpdateView):
-    """ 
-    Edit Recipe 
-    """
-    model = Post
-    template_name = 'editblog.html'
-    form_class = BlogForm
