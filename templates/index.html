@@ -100,4 +100,33 @@
         </div>
     </div>
 </header>
+
+<div class="container-fluid text-container">
+    {% if user.is_authenticated %}
+    <h2 class="text-center mt-3 fw-bold">
+        Welcome back to <span class="dancing-text">PLANET EARTH,</span> {{ user.username }}!</h2>
+    <h2 class="text-center padding mb-5 mt-5">Choose a blog and help save the planet:</h2>
+    </h2>
+
+    {% else %}
+
+    <h2 class="text-center mt-3 fw-bold mb-5">
+        Welcome to <span class="dancing-text">PLANET EARTH</span></h2>
+
+    <h4 class="text-center mb-5">A place for people to come and find out how to help save our planet,
+         from this global crisis of human impact</h4>
+        <hr class="mt-3 mb-5 orange-rule">
+    <p class="text-center mb-5">Please visit our <a class="link" href="#">About Page</a> to find out more about
+        salad.</p>
+        <p class="text-center mb-5 fw-bold black-text">In the meantime, please browse our blogs below to find your out how to help</p>
+    <p class="text-center mb-5">If you wish to share your own blog, please <a class="link"
+            href="{% url 'account_login' %}" {% block aria_login %}{% endblock %}>log
+            in</a> or, <a class="link" href="{% url 'account_signup' %}" {% block aria_signup %}{% endblock %}>create an account.</a>
+    </p>
+
+    <hr class="mt-3 mb-5 orange-rule">
+    {% endif %}
+</div>
 {% endblock %}
+
+

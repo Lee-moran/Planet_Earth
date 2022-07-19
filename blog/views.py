@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.utils.text import slugify
+from django.contrib import messages
 from django.core.paginator import Paginator
 from .models import Post
 from .forms import CommentForm, BlogForm
@@ -13,6 +14,12 @@ from .forms import CommentForm, BlogForm
 # resuable views which inherit from each other
 # allows us yo view our blog 
 # MVT - model,view,teplates
+
+def about(request):
+    """
+    renders about page
+    """
+    return render(request, "about.html")
 
 
 class PostList(generic.ListView):
@@ -107,7 +114,9 @@ class AddBlogs(View):
         """
         What happens for a GET request
         """
-        return render(request, "add_blogs.html", {"blog_form": BlogForm()})
+        context = {'blog_form': BlogForm()}
+        return render(request, 'add_blogs.html', context)
+        
 
     def post(self, request):
         """
@@ -121,6 +130,7 @@ class AddBlogs(View):
             blog.slug = slugify('-'.join([blog.title, str(blog.author)]), allow_unicode=False)
             blog.save()
             return redirect('your_blogs')
+            
         else:
             # create message error 
             blog_form = BlogForm()

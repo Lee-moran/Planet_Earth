@@ -18,7 +18,7 @@ class BlogForm(forms.ModelForm):
         fields = [
             'title',
             'author',
-            'excerpt',
+            'content',
             'featured_image',
         ]
 
