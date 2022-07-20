@@ -11,7 +11,7 @@
                 {% for post in post_list %}
                 <div class="col-md-4">
                     <div class="card shadow-lg mb-5 bg-light bg-gradient rounded">
-                        <div class="card-body bg-white">
+                        <div class="card-body bg-white col card mt-3">
                             <div class="image-container">
                                 {% if "placeholder" in post.featured_image.url %}
                                 <img class="card-img-top"
@@ -105,12 +105,12 @@
     {% if user.is_authenticated %}
     <h2 class="text-center mt-3 fw-bold">
         Welcome back to <span class="dancing-text">PLANET <span class="thin blue-o"> | EARTH,</span></span> {{ user.username }}!</h2>
-    <h2 class="text-center padding mb-5 mt-5">Choose a blog and edutacte yourself on whats going on around you, affected by 
-        the impact of humans on the world. What action are you going take!</h2>
+    <h2 class="text-center padding mb-5 mt-5">Planet earth needs our help before its too late. <br>
+        Help reverse the impact we as humans have had on the planet.</h2>
     </h2>
 
     {% else %}
-
+ <!-- Not logged in user will see this section as home page with Signup and Login button -->
     <h2 class="text-center mt-3 fw-bold mb-5">
         Welcome to <span class="dancing-text">PLANET EARTH</span></h2>
 

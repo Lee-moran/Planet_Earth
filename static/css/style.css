@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,400;0,700;1,300&family=Roboto:ital,wght@0,400;0,700;1,300&family=Ubuntu:wght@300&display=swap');
+
 body {
     background-color: #100f0f;
 }
@@ -87,6 +89,7 @@ body {
     transform: skew(15deg);
     z-index: 100;
 }
+
 
 .post-link {
     text-decoration: none;
@@ -183,18 +186,27 @@ body {
 /*
 footer
 */
-
 .footer {
     font-size: 30px;
+    font-family: 'Exo';
 }
-.footer a {
-    color: rgb(18, 186, 43);
+
+.footer-for-lg {
+    display: none;
 }
+
+.footer-container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
 .social-links {
-    margin: 0;
     text-align: center;
     font-size: 40px;
 }
+
+
 .dark-bg {
     background-color: #3b443f;
 }
