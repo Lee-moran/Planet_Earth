@@ -1,10 +1,10 @@
 body {
-    background-color: #F9FAFC;
+    background-color: #100f0f;
 }
 
 .brand {
     font-family: Lato, sans-serif;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: 700;
     color: #060640;
 }
@@ -25,12 +25,10 @@ body {
     background-color: #fff;
 }
 
-.dark-bg {
-    background-color: #002043;
-}
+
 
 .main-bg {
-    background-color: #ffffff;
+    background-color: #e1c3af;
 }
 
 .card {
@@ -111,7 +109,7 @@ body {
 }
 
 .btn-signup {
-    background-color: #23BBBB;
+    background-color: #7cb6e5;
     color: #fff;
 }
 
@@ -159,13 +157,14 @@ body {
 
 
 
+
 /* hero div */
 .caption {
     position: absolute;
     top: 45%;
     left: 0;
     width: 100%;
-    background-color: rgba(174, 170, 170, 0.546)
+    background-color: rgba(249, 246, 246, 0.546)
     
   }
   
@@ -181,6 +180,10 @@ body {
     box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
   }
 
+/*
+footer
+*/
+
 .footer {
     font-size: 30px;
 }
@@ -191,6 +194,9 @@ body {
     margin: 0;
     text-align: center;
     font-size: 40px;
+}
+.dark-bg {
+    background-color: #3b443f;
 }
 
 /*
@@ -259,3 +265,4 @@ ABOUT PAGE
 .climate-quote {
   margin-top: 105px;
 }
+

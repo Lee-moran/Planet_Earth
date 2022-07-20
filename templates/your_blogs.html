@@ -11,7 +11,7 @@
             <hr>
         </div>
         <div class="col-12 text-center mt-2">
-            <a href="{% url 'add_blogs' %}"><button class="btn-lg btn mb-2"> Add blog <i
+            <a href="{% url 'add_blogs' %}"><button class="btn btn-outline-primary mb-2 btn-lg"> Add blog <i
                         class="fas fa-plus-square ml-3"></i></button></a>
         </div>
     </div>
@@ -22,9 +22,9 @@
             <div class="row no-gutters">
                 {% for post in page_obj %}
                 <div class="col-md-4">
-                    <div class="card border-0 mb-4 all-recipes-cards">
+                    <div class="card card shadow-lg mb-5 bg-light bg-gradient rounded">
                         <a href="{% url 'post_detail' post.slug %}" class="text-decoration-none text-reset">
-                            <div class="card-body">
+                            <div class="card-body bg-white">
                                 <div class="image-container">
                                     {% if "placeholder" in post.image.url %}
                                     <img src="https://res.cloudinary.com/djxmuiopy/image/upload/v1658231845/gbezhmyefmxix4qf6q4l.jpg" alt="board" class="card-img-top img-fit"
@@ -45,9 +45,9 @@
                             <!-- EDIT AND DELETE -->
                             <span>
                                 <a href="{% url 'editblog' post.id %}"><button
-                                        class="btn-sm btn btn-success ">Edit</button></a></span>
+                                        class="btn-sm btn btn-outline-success ">Edit</button></a></span>
                             <span>
-                                <button type="button" class="btn-sm btn btn-danger" data-bs-toggle="modal"
+                                <button type="button" class="btn-sm btn btn-outline-danger" data-bs-toggle="modal"
                                     data-bs-target='#deleteModal{{post.id}}'>Delete</button>
                             </span>
                         </div>
@@ -78,12 +78,24 @@
                 {% endif %}
                 {% endfor %}
             </div>
+            {% if is_paginated %}
+            <nav aria-label="Page navigation">
+                <ul class="pagination justify-content-center">
+                    {% if page_obj.has_previous %}
+                    <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+                    {% endif %}
+                    {% if page_obj.has_next %}
+                    <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+
+                    {% endif %}
+                </ul>
+            </nav>
+            {% endif %}
         </div>
     </div>
 </div>
 
 
-{% include "pagination.html" %}
 
 
 {% endblock %}

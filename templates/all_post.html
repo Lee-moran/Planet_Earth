@@ -6,7 +6,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-12 text-center mt-5">
+        <div class="col-12 text-center mt-2">
             <h2> All blogs</h2>
             <hr>
         </div>
@@ -19,9 +19,9 @@
             <div class="row no-gutters">
                 {% for post in post_list %}
                 <div class="col-md-4">
-                    <div class="card border-0 mb-4 all-recipes-cards">
+                    <div class="card border-0 mb-4">
                         <a href="{% url 'post_detail' post.slug %}" class="text-decoration-none text-reset">
-                            <div class="card-body">
+                            <div class="card-body shadow-lg mb-5 bg-light bg-gradient rounded">
                                 <div class="image-container">
                                     {% if "placeholder" in post.featured_image.url %}
                                     <img src="{% static 'images/forest.jpg' %}" alt="board" class="card-img-top img-fit"
