@@ -92,7 +92,7 @@
                 <div class="caption">
                     <div class="text-center-caption">
                         <h1 class="p-3 mb-2 mb-2 text-black thin">ONE <span class="thin blue-o"> | PLANET</span></h1>
-                        <h2 class="p-3 mb-2 text-black thin">OUR | PLANET </h2>
+                        <h2 class="p-3 mb-2 text-black"> OUR | PLANET </h2>
                     </div>
                 </div>
             </div>
@@ -104,7 +104,7 @@
 <div class="container-fluid text-container">
     {% if user.is_authenticated %}
     <h2 class="text-center mt-3 fw-bold">
-        Welcome back to <span class="dancing-text">PLANET EARTH,</span> {{ user.username }}!</h2>
+        Welcome back to <span class="dancing-text">PLANET <span class="thin blue-o"> | EARTH,</span></span> {{ user.username }}!</h2>
     <h2 class="text-center padding mb-5 mt-5">Choose a blog and help save the planet:</h2>
     </h2>
 
