@@ -1,108 +1,82 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-Welcome Lee-moran,
+# Project 4 Blog Site
+Full-Stack Toolkit
+Project purpose:
+This site is a blog style news site, aimed to let users keep up with the fast changing world problems
+In this project, ive built a Full-Stack site based on business logic used to control a centrally-owned dataset. Set up an authentication mechanism and provide role-based access to the site's data or other activities based on the dataset.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+Main Technologies
+HTML, CSS, JavaScript, Python+Django
+Relational database (recommending MySQL or Postgres)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+## Site owner main objectives 
+- to inform users about whats happening to the planet
+- to educate users about the Planet, what can they do to help
+- to increase users interests and curiosity on the affects harming the planet
+- to provide a platform for users to share posts, comments and interact with each other
+- to create a community with people that has common interests in saving the planet 
 
-## Gitpod Reminders
+features to include:
+Posts can be up/downvoted
+Comments can be left on a post
+Time/Date of posting
+Topic groupings/categories
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## Site user main objectives 
+- to keep up with planet news
+- to meet other like mined people 
+- to interact and discuss with others on specific topics 
+- to learn from each other about different problems globally
+- to share posts, ideas, opinions with people who understand you 
+- to show your passion to other people who dont know alot about it and want to learn.
+- to post, read and comment on news stories.
 
-`python3 -m http.server`
+## WHY THIS
+This has been an ongoing problem for the planet, and since the world has reopened from covid pandemic we have put aside the real issue on saving our planet. surely if we caused these disasters we can fix them. This is why we need everyone todo there part.
 
-A blue button should appear to click: _Make Public_,
+Scientists say eight years left to avoid worst effects.” : “IPCC climate report gives us 10 years to save the world.” 22-jan-2022
 
-Another blue button should appear to click: _Open Browser_.
+The massive melting of glaciers as a result of global heating has caused marked shifts in the Earth's axis of rotation since the 1990s,
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+Global sea level rise accelerated since 2013 to a new high in 2021, with continued ocean warming and ocean acidification.
 
-A blue button should appear to click: _Make Public_,
+I decided to build this project, because I personally believe this is our future, and I would like more people to be aware of this, get interested and try to understand it. For those who have the same interests as me, I hope this site can be a place to share and exchange information, knowledge and opinions about the planet and how we all can make a difference.
+ 
 
-Another blue button should appear to click: _Open Browser_.
+### User stories:
+1) As a Site User I can view a list of posts so that I can select one to read
+2) As a Site User I can click on a post so that I can read the full text
+3) As a Site User / Admin I can view the number of likes on each post so that I can see which is the most popular or viral
+4) As a Site User / Admin I can view comments on an individual post so that I can read the conversation
+5) As a Site User I can register an account so that I can comment and like
+6) As a Site User I can leave comments on a post so that I can be involved in the conversation
+7) As a Site User I can like or unlike a post so that I can interact with the content
+8) As a Site Admin I can create, read, update and delete posts so that I can manage my blog content
+9) As a Site Admin I can create draft posts so that I can finish writing the content later
+10) As a Site Admin I can approve or disapprove comments so that I can filter out objectionable comments
+11) As Site User i can create a post so that others can views my opinion on relevant topics
+12) As a Site User i can view a paginated list of posts so that easily select which post to view
+13) As Site User i can create blogs so that i can share my views on relevant topics aswell
+14) As  Site user i can maintain the quality of material being read so that the reader has fresh material
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
 
-To log into the Heroku toolbelt CLI:
+## Wirerframes 
+Images go here 
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+# DataBase structure 
+- [Created on](https://lucid.app/)
+- [a link to live wireframe](https://lucid.app/lucidchart/4431c8b1-f218-41b9-858e-24ef8ad521df/edit?viewport_loc=-371%2C168%2C2501%2C921%2C0_0&invitationId=inv_fa6de680-4a18-4d50-ad65-f42fc915c1cb#)
 
-------
 
-## Release History
+## Fonts and color scheme 
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+## Testing 
+Jigsaw CSS validator
+Nu Html checker 
+Pep8 
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
