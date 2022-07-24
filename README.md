@@ -61,15 +61,23 @@ I decided to build this project, because I personally believe this is our future
 
 
 ## Wirerframes 
-Images go here 
+Image goes here 
+- [live wireframe](https://lucid.app/lucidspark/eb631a3a-3a1f-4c98-a978-4a3a5971fb43/edit?viewport_loc=808%2C-849%2C5132%2C2368%2C0_0&invitationId=inv_1c43a584-275a-4ed4-b9ae-7b6584675b5e#)
 
 
 # DataBase structure 
-- [Created on](https://lucid.app/)
+Image goes here 
 - [a link to live wireframe](https://lucid.app/lucidchart/4431c8b1-f218-41b9-858e-24ef8ad521df/edit?viewport_loc=-371%2C168%2C2501%2C921%2C0_0&invitationId=inv_fa6de680-4a18-4d50-ad65-f42fc915c1cb#)
 
 
 ## Fonts and color scheme 
+
+Exo
+Roboto
+Ubuntu 
+lato 
+
+Colors based of a color palette of the world/ planet [colors](https://icolorpalette.com/imagepalette/color-palette-ideas-from-sphere-wood-macro-photography-image)
 
 ## Testing 
 Jigsaw CSS validator
@@ -80,3 +88,5 @@ Pep8
 
 
 
+Reference:
+- [Created on](https://lucid.app/)
