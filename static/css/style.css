@@ -210,16 +210,16 @@ footer
 }
 
 /*
-ADD PAGE
+ADD blog
 */
 .control-group {
     margin-left: auto;
     margin-right: auto;
-    width: 50em;
+    width: auto;
 }
 .btn-secondary {
     margin-top: 20px;
-    margin-left: 450px;
+    margin-left: 500px;
 }
 
 /*
@@ -278,21 +278,39 @@ ABOUT PAGE
 }
 
 
+.nav-link{
+    color:#000;
+}
 
-@media only screen and (min-width: 750px) {
+.navbar-toggler{
+    color: #000;
+    
+}
+
+
+@media only screen and (min-width: 450px) {
     body {
         font-size: medium;
     }
     .caption{
-        font-size: medium ;
+        font-size: medium;
         position: absolute;
         top: 30%;
         left: 0;
         width: 100%;
-        background-color: rgba(249, 246, 246, 0.546)
+        background-color: rgba(249, 246, 246, 0.546);
     }
 
     .brand{
         font-size: 25px;
     }
+
+}
+
+@media only screen and (min-width: 700px) {
+    .btn-secondary {
+        margin-top: 20px;
+        margin-left: 250px;
+    }
+
 }
