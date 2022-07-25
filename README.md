@@ -73,8 +73,8 @@ Image goes here
 ## Fonts and color scheme 
 
 Exo
+Ubuntu
 Roboto
-Ubuntu 
 lato 
 
 Colors based of a color palette of the world/ planet [colors](https://icolorpalette.com/imagepalette/color-palette-ideas-from-sphere-wood-macro-photography-image)
@@ -84,9 +84,42 @@ Jigsaw CSS validator
 Nu Html checker 
 Pep8 
 
+## Installations
+Below are the installations we need before writing any code
+
+Install the server to use when deploy on Heroku
+```bash
+pip3 install django gunicorn
+```
+
+Supporting libraries:
+``` bash
+Postgresql and psycopg2
+pip3 install dj_database_url psycopg2
+```
+
+Run Cloudinary
+``` bash
+pip3 install dj3-cloudinary-storage
+```
+
+Create file list:
+Create requirement.txt
+``` bash
+pip3 freeze --local > requirements.txt
+```
+
+Create new django project:
+```bash
+django-admin startproject Filename:
+```
+
+Create blog app
+```bash
+python3 manage.py startapp blog
+```
 
 
 
-
-Reference:
+## Reference:
 - [Created on](https://lucid.app/)

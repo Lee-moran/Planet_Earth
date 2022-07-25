@@ -28,7 +28,6 @@ body {
 }
 
 
-
 .main-bg {
     background-color: #e1c3af;
 }
@@ -160,7 +159,6 @@ body {
 
 
 
-
 /* hero div */
 .caption {
     position: absolute;
@@ -224,10 +222,6 @@ ADD PAGE
     margin-left: 450px;
 }
 
-
-
-
-
 /*
 ABOUT PAGE
 */
@@ -281,4 +275,24 @@ ABOUT PAGE
 .about-text{
     font-family: 'Exo';
     
+}
+
+
+
+@media only screen and (min-width: 750px) {
+    body {
+        font-size: medium;
+    }
+    .caption{
+        font-size: medium ;
+        position: absolute;
+        top: 30%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(249, 246, 246, 0.546)
+    }
+
+    .brand{
+        font-size: 25px;
+    }
 }
