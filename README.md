@@ -5,24 +5,24 @@ Project purpose:
 This site is a blog style news site, aimed to let users keep up with the fast changing world problems
 In this project, ive built a Full-Stack site based on business logic used to control a centrally-owned dataset. Set up an authentication mechanism and provide role-based access to the site's data or other activities based on the dataset.
 
-Main Technologies
-HTML, CSS, JavaScript, Python+Django
-Relational database (recommending MySQL or Postgres)
+### Main Technologies
+- HTML, CSS, JavaScript, Python+Django
+- Relational database (recommending MySQL or Postgres)
 
-## Site owner main objectives 
+### Site owner main objectives 
 - to inform users about whats happening to the planet
 - to educate users about the Planet, what can they do to help
 - to increase users interests and curiosity on the affects harming the planet
 - to provide a platform for users to share posts, comments and interact with each other
 - to create a community with people that has common interests in saving the planet 
 
-features to include:
-Posts can be up/downvoted
-Comments can be left on a post
-Time/Date of posting
-Topic groupings/categories
+### Features to include:
+- Posts can be up/downvoted
+- Comments can be left on a post
+- Time/Date of posting
+- Topic groupings/categories
 
-## Site user main objectives 
+### Site user main objectives 
 - to keep up with planet news
 - to meet other like mined people 
 - to interact and discuss with others on specific topics 
@@ -41,9 +41,21 @@ The massive melting of glaciers as a result of global heating has caused marked 
 Global sea level rise accelerated since 2013 to a new high in 2021, with continued ocean warming and ocean acidification.
 
 I decided to build this project, because I personally believe this is our future, and I would like more people to be aware of this, get interested and try to understand it. For those who have the same interests as me, I hope this site can be a place to share and exchange information, knowledge and opinions about the planet and how we all can make a difference.
+
+Consumers who come to the site are greated depending on there loged in status or not. Being a member of the site gives you more accessibility being able to write, like and comment on individual blogs. 
+
+Eg) Not logged in
+
+<img width="1280" alt="logged out" src="https://user-images.githubusercontent.com/92300148/180831938-980289a5-3cb8-4d0a-b94c-24db8a4512ba.png">
+<img width="1272" alt="not loged in" src="https://user-images.githubusercontent.com/92300148/180831920-4b45cc6c-c6b1-4e57-8960-81a244a420d0.png">
+
+Eg) Logged in
+<img width="1233" alt="logged in" src="https://user-images.githubusercontent.com/92300148/180832197-019fc69d-3822-4d11-ae49-76504723a0fd.png">
+<img width="1279" alt="User already loged in " src="https://user-images.githubusercontent.com/92300148/180832206-cf327ade-81fc-423d-8e68-bbfae78abc18.png">
+
  
 
-### User stories:
+## User stories:
 1) As a Site User I can view a list of posts so that I can select one to read
 2) As a Site User I can click on a post so that I can read the full text
 3) As a Site User / Admin I can view the number of likes on each post so that I can see which is the most popular or viral
@@ -61,23 +73,28 @@ I decided to build this project, because I personally believe this is our future
 
 
 ## Wirerframes 
-Image goes here 
+<img width="1424" alt="Wireframe" src="https://user-images.githubusercontent.com/92300148/180831309-11ddd33c-d113-4526-b79e-7fff20c23ddc.png">
+
 - [live wireframe](https://lucid.app/lucidspark/eb631a3a-3a1f-4c98-a978-4a3a5971fb43/edit?viewport_loc=808%2C-849%2C5132%2C2368%2C0_0&invitationId=inv_1c43a584-275a-4ed4-b9ae-7b6584675b5e#)
 
 
 ## DataBase structure 
-Image goes here 
+<img width="664" alt="DB structure" src="https://user-images.githubusercontent.com/92300148/180831042-74bc7de4-bb85-4652-a441-8922c6603096.png">
+
 - [a link to live wireframe](https://lucid.app/lucidchart/4431c8b1-f218-41b9-858e-24ef8ad521df/edit?viewport_loc=-371%2C168%2C2501%2C921%2C0_0&invitationId=inv_fa6de680-4a18-4d50-ad65-f42fc915c1cb#)
 
 
-## Fonts and color scheme 
+## Fonts and Color scheme 
 Exo & Ubuntu are the primary fonts I wanted to use because there soft and complamentarty. Giving of a sense of peace. the stroke in these font work well together. 
-[Exo](https://fonts.google.com/?query=exo&preview.text=Planet%20Earth%20&preview.layout=row&preview.text_type=custom)
-[Ubuntu](https://fonts.google.com/specimen/Ubuntu?query=ub&preview.text=Planet%20Earth%20&preview.layout=row&preview.text_type=custom)
+- [Exo](https://fonts.google.com/?query=exo&preview.text=Planet%20Earth%20&preview.layout=row&preview.text_type=custom)
+- [Ubuntu](https://fonts.google.com/specimen/Ubuntu?query=ub&preview.text=Planet%20Earth%20&preview.layout=row&preview.text_type=custom)
 
-As a fall back I used Roboto which is a front i used before and lato as well as the standard sans serif. Good idea to have a fall back so your content is viewable.
+As a fall back I used ***Roboto and lato***  which is a front i used before and lato as well as the standard sans serif. Good idea to have a fall back so your content is viewable.
 
-In terms of the color scheme I went with something slightly different. I used the planet as inspiration.[colors](https://icolorpalette.com/imagepalette/color-palette-ideas-from-sphere-wood-macro-photography-image) I think these colors bring warmth and a real feel for the earth with the browns blues and greens.
+In terms of the color scheme I went with something slightly different. I used the planet as inspiration. I think these colors bring warmth and a real feel for the earth with the browns blues and greens.
+- [colors](https://icolorpalette.com/imagepalette/color-palette-ideas-from-sphere-wood-macro-photography-image)
+
+<img width="367" alt="color palette " src="https://user-images.githubusercontent.com/92300148/180831474-2ae6c06c-a3bc-4aec-b569-12d745786cf3.png">
 
 ## Testing 
 Jigsaw CSS validator
