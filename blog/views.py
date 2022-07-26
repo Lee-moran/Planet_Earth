@@ -175,3 +175,17 @@ def delete_blogs(request, post_id):
     post.delete()
     return redirect(reverse(
         'your_blogs'))
+
+
+def search_blog(request):
+    """ 
+    Search bar view, template form youtube.
+    """
+    # https://www.youtube.com/watch?v=AGtae4L5BbI
+    if request.method == "POST":
+        searched = request.POST['searched']
+        posts = Post.objects.filter(title__icontains=searched)
+        return render(request, 'search_blog.html',
+        {'searched': searched, 'posts': posts})
+    else:
+        return render(request, 'search_blog.html', {})
