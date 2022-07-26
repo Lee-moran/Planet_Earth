@@ -36,23 +36,18 @@
                     <div class="col-2 p-0">
                         <strong>
                             {% if user.is_authenticated %}
-
                             <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
                                 {% csrf_token %}
                                 {% if liked %}
-
                                 <button type="submit" name="blogpost_id" value="{{ post.slug }}" class="btn-like"><i
-                                        class="fa-solid fa-heart-circle-check"></i></button>
-
+                                        class="fas fa-heart"></i></button>
                                 {% else %}
-
                                 <button type="submit" name="blogpost_id" value="{{ post.slug }}" class="btn-like"><i
-                                        class="fa-solid fa-heart"></i></button>
-
+                                        class="far fa-heart"></i></button>
                                 {% endif %}
                             </form>
                             {% else %}
-                            <span class="text-secondary"><i class="fa-solid fa-heart"></i></span>
+                            <span class="text-secondary"><i class="far fa-heart"></i></span>
                             {% endif %}
                             <span class="text-secondary">{{ post.number_of_likes }}</span>
                         </strong>
@@ -100,25 +95,25 @@
         <div class="col-md-4 card mb-4  mt-3 ">
             <div class="card-body">
                 {% if commented %}
-                <div class="alert alert-success" id ="msg"role="alert">
+                <div class="alert alert-success" id="msg" role="alert">
                     Your comment is awaiting approval
                 </div>
                 {% else %}
             </div>
-                {% if user.is_authenticated %}
+            {% if user.is_authenticated %}
 
-                <h3>Leave a comment:</h3>
-                <p>Posting as: {{ user.username }}</p>
-                <form method="post" style="margin-top: 1.3em;">
-                    {{ comment_form | crispy }}
-                    {% csrf_token %}
-                    <button type="submit" class="btn btn-signup btn-lg">Submit</button>
-                </form>
-                {% endif %}
-                {% endif %}
-            </div>
+            <h3>Leave a comment:</h3>
+            <p>Posting as: {{ user.username }}</p>
+            <form method="post" style="margin-top: 1.3em;">
+                {{ comment_form | crispy }}
+                {% csrf_token %}
+                <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+            </form>
+            {% endif %}
+            {% endif %}
         </div>
     </div>
+</div>
 </div>
 
 

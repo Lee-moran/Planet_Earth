@@ -130,7 +130,7 @@ class AddBlogs(View):
             blog.author = request.user
             blog.slug = slugify('-'.join([blog.title, str(blog.author)]), allow_unicode=False)
             blog.save()
-            messages.success(request, 'Your post is awaiting approval.')
+            messages.success(request, 'Your Blog is awaiting approval.')
             return redirect('your_blogs')
             
         else:

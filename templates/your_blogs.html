@@ -26,7 +26,7 @@
                         <a href="{% url 'post_detail' post.slug %}" class="text-decoration-none text-reset">
                             <div class="card-body bg-white">
                                 <div class="image-container">
-                                    {% if "placeholder" in post.image.url %}
+                                    {% if "placeholder" in post.featured_image.url %}
                                     <img src="https://res.cloudinary.com/djxmuiopy/image/upload/v1658231845/gbezhmyefmxix4qf6q4l.jpg" alt="board" class="card-img-top img-fit"
                                         height="300">
                                     {% else %}
@@ -41,7 +41,7 @@
                                     {{ post.number_of_likes }}</p>
                             </div>
                         </a>
-                        <div class="text-center">
+                        <div class="text-center mb-3">
                             <!-- EDIT AND DELETE -->
                             <span>
                                 <a href="{% url 'editblog' post.id %}"><button

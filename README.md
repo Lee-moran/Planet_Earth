@@ -53,7 +53,13 @@ Eg) Logged in
 <img width="1233" alt="logged in" src="https://user-images.githubusercontent.com/92300148/180832197-019fc69d-3822-4d11-ae49-76504723a0fd.png">
 <img width="1279" alt="User already loged in " src="https://user-images.githubusercontent.com/92300148/180832206-cf327ade-81fc-423d-8e68-bbfae78abc18.png">
 
- 
+
+I decided that any new post or comment added by the user needs approval, reasons being:
+
+I have no one to moderate the post, that is the reason any posts coming from user needs to be approved by admin first, they will be left as a draft until admin approves.
+To prevent spam, and/or post that is unrelated to Planet Earth 
+To make sure the language is appropriate
+
 
 ## User stories:
 1) As a Site User I can view a list of posts so that I can select one to read
@@ -189,7 +195,16 @@ To deploy this page to Heroku from its GitHub repository, the following steps we
 - [Summernote GitHub Docs](https://github.com/summernote/summernote,)
 - [Cripsy Forms Docs](https://django-crispy-forms.readthedocs.io/en/latest/)
 - CodeInstitute - "I Think Therefore I Blog"
+- [Searchbar](https://www.youtube.com/watch?v=AGtae4L5BbI&ab_channel=Codemy.com)
 
 
 
 I have to give a shout out the the tutuor suppport also for there help.
+
+
+
+#### Things I would change
+
+After having a bit of a meltdown we have a function website.. Things id like to improve or change
+- search bar to work differenlty. be able to stay on the same page while searching.
+- change the layout of comments section.

@@ -65,7 +65,7 @@ body {
 }
 
 .masthead-text {
-    background-color: #445261;
+    background-color: #3b443f;
     color: white;
     position: relative;
 }
@@ -82,7 +82,7 @@ body {
     right: 90%;
     height: 100%;
     width: 150%;
-    background: #445261;
+    background: #3b443f;
     -webkit-transform: skew(15deg);
     -moz-transform: skew(15deg);
     transform: skew(15deg);
@@ -97,12 +97,14 @@ body {
 
 .post-link:hover,
 .page-link {
-    color: #E84610;
+    color: #1071e8;
 }
 
 .post-title {
-    margin-top: 10%;
+    margin-top: 5%;
     margin-left: 5%;
+    font-family: "Ubuntu";
+    /* font-size: 20px; */
 }
 
 .post-subtitle {
@@ -204,6 +206,14 @@ footer
     font-size: 40px;
 }
 
+.footer a{
+    color: #7cb6e5;
+    padding: 5px;
+}
+
+.footer a:hover {
+    color: #1071e8;
+}
 
 .dark-bg {
     background-color: #3b443f;
@@ -256,14 +266,6 @@ ABOUT PAGE
   width: 1.3em;
 }
 
-.link {
-  color: #00803f;
-}
-
-.link a:hover {
-  color: #74b807;
-}
-
 .more-about {
   margin-top: 50px;
 }
@@ -277,6 +279,9 @@ ABOUT PAGE
     
 }
 
+/*
+Nav Bar element 
+*/
 
 .nav-link{
     color:#000;
