@@ -35,7 +35,7 @@ DEBUG = False
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['planet-blog.herokuapp.com', 'localhost']
 
 # To prevent 500 errors during login and registration
 ACCOUNT_EMAIL_VERIFICATION = 'none'
