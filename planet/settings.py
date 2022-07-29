@@ -47,7 +47,6 @@ INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
-    'crispy_forms',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.sites',
@@ -58,6 +57,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'django_summernote',
+    'crispy_forms',
     'blog',
 ]
 
