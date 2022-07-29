@@ -27,11 +27,11 @@
                             <div class="card-body bg-white">
                                 <div class="image-container">
                                     {% if "placeholder" in post.featured_image.url %}
-                                    <img src="https://res.cloudinary.com/djxmuiopy/image/upload/v1658231845/gbezhmyefmxix4qf6q4l.jpg" alt="board" class="card-img-top img-fit"
-                                        height="300">
+                                    <img src="https://res.cloudinary.com/djxmuiopy/image/upload/v1658231845/gbezhmyefmxix4qf6q4l.jpg"
+                                        alt="board" class="card-img-top img-fit" height="300">
                                     {% else %}
-                                    <img class="card-img-top img-fit" height="300px" src=" {{ post.featured_image.url }}"
-                                        alt="{{ post.title}}">
+                                    <img class="card-img-top img-fit" height="300px"
+                                        src=" {{ post.featured_image.url }}" alt="{{ post.title}}">
                                     {% endif %}
                                 </div>
                                 <h3 class="card-title">{{ post.title }}</h3>

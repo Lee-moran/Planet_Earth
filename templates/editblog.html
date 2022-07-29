@@ -11,24 +11,16 @@
             <hr>
         </div>
     </div>
-<div class="row">
-    <div class="col mt-3 text-center">
-        <form method="post" enctype="multipart/form-data">
-            {% csrf_token %}
-            {{ form.as_p}}
-            <button class="btn btn-success right mb-2" type="submit" >Edit Post<i class="fas fa-edit ml-3"></i></button>
-        </form>
+    <div class="row">
+        <div class="col mt-3 text-center">
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p}}
+                <button class="btn btn-success right mb-2" type="submit">Edit Post<i
+                        class="fas fa-edit ml-3"></i></button>
+            </form>
+        </div>
     </div>
-  </div>
 </div>
 {% endif %}
 {%endblock%}
-
-
-
-
-
-
-
-
-

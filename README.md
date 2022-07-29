@@ -91,13 +91,13 @@ To make sure the language is appropriate
 
 
 ## Fonts and Color scheme 
-Exo & Ubuntu are the primary fonts I wanted to use because there soft and complamentarty. Giving of a sense of peace. the stroke in these font work well together. 
+***Exo & Ubuntu*** are the primary fonts I wanted to use because there soft and complamentarty. Giving of a sense of peace. the stroke in these font work well together. 
 - [Exo](https://fonts.google.com/?query=exo&preview.text=Planet%20Earth%20&preview.layout=row&preview.text_type=custom)
 - [Ubuntu](https://fonts.google.com/specimen/Ubuntu?query=ub&preview.text=Planet%20Earth%20&preview.layout=row&preview.text_type=custom)
 
 As a fall back I used ***Roboto and lato***  which is a front i used before and lato as well as the standard sans serif. Good idea to have a fall back so your content is viewable.
 
-In terms of the color scheme I went with something slightly different. I used the planet as inspiration. I think these colors bring warmth and a real feel for the earth with the browns blues and greens.
+In terms of the color scheme I went with something slightly different. I used the planet as inspiration. I think these colors bring warmth and a real feel for the earth with the browns blues and greens. Using different variation of the colors.
 - [colors](https://icolorpalette.com/imagepalette/color-palette-ideas-from-sphere-wood-macro-photography-image)
 
 <img width="367" alt="color palette " src="https://user-images.githubusercontent.com/92300148/180831474-2ae6c06c-a3bc-4aec-b569-12d745786cf3.png">
@@ -144,10 +144,9 @@ python3 manage.py startapp blog
 
 ## Issues resolved
 Your Blogs page has an edit and delete button. Delete btn wouldnt work due to its properties.
-I had 2 properties instead of 3 for Bootstrap 5.
+I had 2 properties instead of 3.. As Bootstrap5 requirers 3 properties.
 
 ## Deployment
-
 This project was developed using a [GitPod](https://gitpod.io/ "Link to GitPod") workspace. The code was commited to [Git](https://git-scm.com/ "Link to Git") and pushed to [GitHub](https://github.com/ "Link to GitHub") using the terminal.
 
 ### Deploying on Heroku
@@ -194,17 +193,21 @@ To deploy this page to Heroku from its GitHub repository, the following steps we
 - [Django Docs](https://docs.djangoproject.com/en/3.2/)
 - [Summernote GitHub Docs](https://github.com/summernote/summernote,)
 - [Cripsy Forms Docs](https://django-crispy-forms.readthedocs.io/en/latest/)
-- CodeInstitute - "I Think Therefore I Blog"
+- [CodeInstitute](https://codeinstitute.net/ie/) - "I Think Therefore I Blog"
 - [Searchbar](https://www.youtube.com/watch?v=AGtae4L5BbI&ab_channel=Codemy.com)
 
 
-
-I have to give a shout out the the tutuor suppport also for there help.
-
+I have to give a shout out the the tutuor suppport also for there help,
 
 
-#### Things I would change
+
+### Things I would change make better.
 
 After having a bit of a meltdown we have a function website.. Things id like to improve or change
-- search bar to work differenlty. be able to stay on the same page while searching.
-- change the layout of comments section.
+- Search bar to work differenlty. Be able to stay on the same page while searching. ie on homepage and the serach bar as a drop down.
+- Change the layout of comments section, add an infinite cycle like facebook comments..
+- Create a profile page like github
+- Next would be to incororate chat/message element.. facebook message example.
+- Follow specif people/blog catergories that interest you.
+- Get a notifaction for new blogs that your interested in.
+- Thinking about removing home button all together as home is also the logo/name.

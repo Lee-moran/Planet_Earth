@@ -16,7 +16,7 @@ body {
 }
 
 .blue-o {
-    color: #3d15ee;
+    color: #0048ff;
 }
 
 .thin {
@@ -95,9 +95,15 @@ body {
     color: #445261;
 }
 
-.post-link:hover,
+
 .page-link {
-    color: #1071e8;
+    border: 2px solid #0026ff;
+    background-color: transparent;
+}
+
+.post-link:hover {
+    color: #0026ff;
+    
 }
 
 .post-title {
@@ -169,19 +175,19 @@ body {
     width: 100%;
     background-color: rgba(249, 246, 246, 0.546)
     
-  }
+}
   
 .text-center-caption {
     position: relative;
-  }
+}
   
 .text-container {
     padding: 25px;
-  }
+}
   
 .box-shadow {
     box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
-  }
+}
 
 /*
 footer

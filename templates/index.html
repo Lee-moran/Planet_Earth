@@ -62,43 +62,45 @@
 <!-- Header Image -->
 {% block header %}
 <header class="bg-light">
-       
+
     <div class="container-fluid" style="background-color:#3b443f7c;">
         <div class="row px-1 py-2 text-center">
             {% load static %}
             <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
-                  <div class="carousel-item active" data-bs-interval="1000">
-                    <img src="{% static 'images/galaxy.jpg' %}" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item" data-bs-interval="2000">
-                    <img src="{% static 'images/forest.jpg' %}" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="{% static 'images/dirt.jpg' %}" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="{% static 'images/polution.jpg' %}" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="{% static 'images/reborn.jpg' %}" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="{% static 'images/space.jpg' %}" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="{% static 'images/stars.jpg' %}" class="d-block w-100" alt="...">
-                  </div>
+                    <div class="carousel-item active" data-bs-interval="1000">
+                        <img src="{% static 'images/galaxy.jpg' %}" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="{% static 'images/forest.jpg' %}" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static 'images/dirt.jpg' %}" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static 'images/polution.jpg' %}" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static 'images/reborn.jpg' %}" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static 'images/space.jpg' %}" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static 'images/stars.jpg' %}" class="d-block w-100" alt="...">
+                    </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
                 </button>
-              </div>
+            </div>
 
             <div class="col-lg-6 mx-auto">
                 <div class="caption">
@@ -108,7 +110,7 @@
                     </div>
                 </div>
             </div>
-            
+
         </div>
     </div>
 </header>
@@ -116,30 +118,34 @@
 <div class="container-fluid text-container">
     {% if user.is_authenticated %}
     <h2 class="text-center mt-3 fw-bold" style="font-family:Ubuntu;">
-        Welcome back to <span class="dancing-text">PLANET <span class="thin blue-o"> | EARTH,</span></span> {{ user.username }}!</h2>
-    <h2 class="text-center padding mb-5 mt-5" style="font-family:Exo;">Planet earth needs our help before its too late. <br>
+        Welcome back to <span class="dancing-text">PLANET <span class="thin blue-o"> | EARTH,</span></span>
+        {{ user.username }}!</h2>
+    <h2 class="text-center padding mb-5 mt-5" style="font-family:Exo;">Planet earth needs our help before its too late.
+        <br>
         Help reverse the impact we as humans have had on the planet.</h2>
     </h2>
 
     {% else %}
- <!-- Not logged in user will see this section as home page with Signup and Login button -->
+    <!-- Not logged in user will see this section as home page with Signup and Login button -->
     <h2 class="text-center mt-3 fw-bold mb-5" style="font-family:Ubuntu;">
         Welcome to <span class="dancing-text">PLANET EARTH</span></h2>
 
-    <h4 class="text-center mb-5" style="font-family:Exo;">A place for people to come and find out how to help save our planet,
-         from this global crisis of human impact</h4>
-        <hr class="mt-3 mb-5 orange-rule">
-    <p class="text-center mb-5">Please visit our <a class="link" href="{% url 'about' %}">About Page</a> to find out more about
+    <h4 class="text-center mb-5" style="font-family:Exo;">A place for people to come and find out how to help save our
+        planet,
+        from this global crisis of human impact</h4>
+    <hr class="mt-3 mb-5 orange-rule">
+    <p class="text-center mb-5">Please visit our <a class="link" href="{% url 'about' %}">About Page</a> to find out
+        more about
         Planet.</p>
-        <p class="text-center mb-5 fw-bold black-text">In the meantime, please browse our blogs below to find your out how to help</p>
+    <p class="text-center mb-5 fw-bold black-text">In the meantime, please browse our blogs below to find your out how
+        to help</p>
     <p class="text-center mb-5">If you wish to share your own blog, please <a class="link"
             href="{% url 'account_login' %}" {% block aria_login %}{% endblock %}>log
-            in</a> or, <a class="link" href="{% url 'account_signup' %}" {% block aria_signup %}{% endblock %}>create an account.</a>
+            in</a> or, <a class="link" href="{% url 'account_signup' %}" {% block aria_signup %}{% endblock %}>create an
+            account.</a>
     </p>
 
     <hr class="mt-3 mb-5 orange-rule">
     {% endif %}
 </div>
 {% endblock %}
-
-
