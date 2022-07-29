@@ -1,4 +1,6 @@
 
+<img width="199" alt="Home" src="https://user-images.githubusercontent.com/92300148/181794577-fcfecb44-49f1-409b-954b-960e2ac28515.png">
+
 # Project 4 Blog Site
 Full-Stack Toolkit
 Project purpose:
@@ -125,7 +127,7 @@ HTML code has a few errors when the page is ran through the url. please see deta
 <summary>Python</summary>
 <img width="1133" alt="Pep8" src="https://user-images.githubusercontent.com/92300148/181765323-e5ea0557-9a59-4ed3-9008-ed56bb791a46.png">
 <img width="1028" alt="Error4" src="https://user-images.githubusercontent.com/92300148/181765787-2e281a32-1849-4e8a-abf4-d085e9afa712.png">
-
+</details>
 Only a few warnings such as white space.
 
 ## Installations
@@ -167,10 +169,10 @@ python3 manage.py startapp blog
 Your Blogs page has an edit and delete button. Delete btn wouldnt work due to its properties.
 I had 2 properties instead of 3.. As Bootstrap5 requirers 3 properties.
 
-## Deployment
+# Deployment
 This project was developed using a [GitPod](https://gitpod.io/ "Link to GitPod") workspace. The code was commited to [Git](https://git-scm.com/ "Link to Git") and pushed to [GitHub](https://github.com/ "Link to GitHub") using the terminal.
 
-### Deploying on Heroku
+## Deploying on Heroku
 To deploy this page to Heroku from its GitHub repository, the following steps were taken:
 
 1. Create the Heroku App:
@@ -206,7 +208,7 @@ To deploy this page to Heroku from its GitHub repository, the following steps we
     - Then run the following command: **heroku git:remote -a your_app_name_here** and replace your_app_name_here with the name of your Heroku app. This will link the app to your Gitpod terminal.
     - After linking your app to your workspace, you can then deploy new versions of the app by running the command **git push heroku main** and your app will be deployed to Heroku.
 
-## Reference:
+# Reference:
 - [lucid](https://lucid.app/) - "database structure and wirerframes"
 - [pexel](https://www.pexels.com/) "images"
 - [bootstrap](https://getbootstrap.com/)
@@ -216,13 +218,10 @@ To deploy this page to Heroku from its GitHub repository, the following steps we
 - [Cripsy Forms Docs](https://django-crispy-forms.readthedocs.io/en/latest/)
 - [CodeInstitute](https://codeinstitute.net/ie/) - "I Think Therefore I Blog"
 - [Searchbar](https://www.youtube.com/watch?v=AGtae4L5BbI&ab_channel=Codemy.com)
+- I have to give a shout out the the tutuor suppport also for there help,
 
 
-I have to give a shout out the the tutuor suppport also for there help,
-
-
-
-### Things I would change make better.
+# Things I would change make better.
 
 After having a bit of a meltdown we have a function website.. Things id like to improve or change
 - Search bar to work differenlty. Be able to stay on the same page while searching. ie on homepage and the serach bar as a drop down.
@@ -232,3 +231,4 @@ After having a bit of a meltdown we have a function website.. Things id like to 
 - Follow specif people/blog catergories that interest you.
 - Get a notifaction for new blogs that your interested in.
 - Thinking about removing home button all together as home is also the logo/name.
+- add error message to the project
