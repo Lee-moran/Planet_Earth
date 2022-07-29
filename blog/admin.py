@@ -14,6 +14,7 @@ class PostAdmin(SummernoteModelAdmin):
     prepopulated_fields = {'slug': ('title',)}
     summernote_fields = ('content')
 
+
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
     """
@@ -24,10 +25,9 @@ class CommentAdmin(admin.ModelAdmin):
     search_fields = ['name', 'email', 'body']
     actions = ['approve_comments']
 
-
     def approve_comments(self, request, queryset):
         """
         approval of comments
         """
         queryset.update(approved=True)
-
+        

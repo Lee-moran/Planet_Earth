@@ -103,9 +103,30 @@ In terms of the color scheme I went with something slightly different. I used th
 <img width="367" alt="color palette " src="https://user-images.githubusercontent.com/92300148/180831474-2ae6c06c-a3bc-4aec-b569-12d745786cf3.png">
 
 ## Testing 
-Jigsaw CSS validator
-Nu Html checker 
-Pep8 
+[Jigsaw CSS validator](https://jigsaw.w3.org/css-validator/) was used to validate CSS code
+<details>
+<summary>CSS</summary>
+<img width="1381" alt="Pass" src="https://user-images.githubusercontent.com/92300148/181757271-d4afcec9-ebcb-4a13-8ac8-87d77374398f.png">
+<summary>CSS warnings</summary>
+<img width="1378" alt="Errors" src="https://user-images.githubusercontent.com/92300148/181757277-b3f2d3a1-9eb0-4b12-af80-f9e965c5ccb4.png">
+</details>
+CSS code passes the validator with no errors, however, there are some warnings, please see details in the screenshot. I looked into them, and don’t really know how to fix them at the moment, so I just left them there.
+
+[Nu Html checker](https://validator.w3.org/) was used to validate HTML code
+<details>
+<summary>HTML</summary>
+<img width="1303" alt="Error2" src="https://user-images.githubusercontent.com/92300148/181762103-05e6fede-620e-470d-abb5-916cbcff54ae.png">
+<img width="1360" alt="Error3" src="https://user-images.githubusercontent.com/92300148/181762142-7d710105-d54b-4077-9f24-c0e7770e6a5d.png">
+</details>
+HTML code has a few errors when the page is ran through the url. please see details in the screenshot. I looked into them, and don’t really know how to fix them at the moment, so I just left them there.
+
+[Pep8](http://pep8online.com/) Used to validate Python code 
+<details>
+<summary>Python</summary>
+<img width="1133" alt="Pep8" src="https://user-images.githubusercontent.com/92300148/181765323-e5ea0557-9a59-4ed3-9008-ed56bb791a46.png">
+<img width="1028" alt="Error4" src="https://user-images.githubusercontent.com/92300148/181765787-2e281a32-1849-4e8a-abf4-d085e9afa712.png">
+
+Only a few warnings such as white space.
 
 ## Installations
 Below are the installations we need before writing any code

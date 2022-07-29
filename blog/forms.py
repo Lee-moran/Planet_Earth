@@ -25,7 +25,5 @@ class BlogForm(forms.ModelForm):
             'content': SummernoteWidget(),
         }
 
-
     def __init__(self, *args, **kwargs):
         super(BlogForm, self).__init__(*args, **kwargs)
-

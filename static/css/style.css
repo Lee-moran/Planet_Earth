@@ -152,6 +152,7 @@ body {
     background: transparent;
     border: none;
 }
+
 .input[type=text] {
     float: right;
     padding: 6px;
@@ -168,6 +169,7 @@ body {
 
 
 /* hero div */
+
 .caption {
     position: absolute;
     top: 45%;
@@ -192,6 +194,7 @@ body {
 /*
 footer
 */
+
 .footer {
     font-size: 30px;
     font-family: 'Exo';
@@ -228,6 +231,7 @@ footer
 /*
 ADD blog
 */
+
 .control-group {
     margin-left: auto;
     margin-right: auto;

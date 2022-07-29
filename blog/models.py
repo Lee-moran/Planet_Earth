@@ -43,9 +43,10 @@ class Post(models.Model):
         """Sets absolute URL"""
         return reverse('your_blogs')
 
-"""
+
+'''
 How our comment will be viewed by user
-"""
+'''
 
 
 class Comment(models.Model):
