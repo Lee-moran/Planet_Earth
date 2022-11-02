@@ -11,7 +11,7 @@ class CommentForm(forms.ModelForm):
 
 class BlogForm(forms.ModelForm):
     """
-    Form to add a recipe
+    Form to add a blog
     """
     class Meta:
         model = Post
@@ -20,6 +20,8 @@ class BlogForm(forms.ModelForm):
             'author',
             'content',
             'featured_image',
+            'read_time',
+            'rating',
         ]
         widgets = {
             'content': SummernoteWidget(),

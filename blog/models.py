@@ -28,6 +28,8 @@ class Post(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(
         User, related_name='blogpost_like', blank=True)
+    rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
+    read_time = models.CharField(max_length=200, null=True, blank=True)
 
 
     class Meta:
