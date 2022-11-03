@@ -232,3 +232,7 @@ After having a bit of a meltdown we have a function website.. Things id like to 
 - Get a notifaction for new blogs that your interested in.
 - Thinking about removing home button all together as home is also the logo/name.
 - add error message to the project
+
+# Resubmission 
+- added to the post model - rating and read_time 
+- added to the html blog post 
