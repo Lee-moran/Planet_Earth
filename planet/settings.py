@@ -11,8 +11,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
-from django.contrib.messages import constants as messages
 import os
+from django.contrib.messages import constants as messages
 import dj_database_url
 if os.path.isfile('env.py'):
     import env
@@ -31,7 +31,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
