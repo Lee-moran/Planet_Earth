@@ -110,7 +110,12 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'planet.wsgi.application'
 
-ALLOWED_HOST = ['planet-blog.herokuapp.com', 'local host']
+ALLOWED_HOST = ['planet-blog.herokuapp.com', 'local host'
+
+# Add Render.com URL to allowed hosts
+RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
+ if RENDER_EXTERNAL_HOSTNAME:
+   ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
 
 # Database
