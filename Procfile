@@ -1,1 +1,1 @@
-web: gunicorn planet_earth.wsgi
+web: gunicorn planet.wsgi
